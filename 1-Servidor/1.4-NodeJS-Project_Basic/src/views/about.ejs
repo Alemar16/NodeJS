@@ -3,14 +3,279 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <!--estilo css  -->
+    <!--estilo css  -->
     <%- include("./partials/head.ejs") %>
     <title><%= title %></title>
   </head>
   <body>
+    <%- include("./partials/navitagion.ejs") %>
 
-     <%- include("./partials/navitagion.ejs") %>
+    <!-- Contenido de la página -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="display-4 text-white">Node.js y Desarrollo Web Moderno</h1>
+          <p class="lead text-white">
+            Descubre cómo Node.js, Express, Morgan, EJS y Nodemon pueden
+            impulsar tus proyectos web. Crea aplicaciones web elegantes y
+            eficientes.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <!-- Imagen referencial a Node.js u otras tecnologías (reemplaza la ruta) -->
+          <img
+            src="/image/about-nodejs.jpg"
+            alt="Node.js"
+            class="img-fluid mb-3 rounded shadow"
+          />
+        </div>
+      </div>
+    </div>
 
-    <h1>About</h1>
+    <!-- Sección de características -->
+
+    <div class="row row-cols-1 row-cols-md-3 mt-4 mb-4 g-4 justify-content-center align-items-stretch shadow">
+  <!-- Express -->
+  <div class="col-6 col-md-4 col-lg-3 mb-4">
+    <div class="card bg-dark d-flex flex-column h-100">
+      <img
+        src="/image/express.jpg"
+        class="card-img-top w-75 mx-auto shadow rounded mt-1"
+        alt="Hollywood Sign on The Hill"
+      />
+      <div class="card-body text-secondary">
+        <h5 class="card-title text-light">Express</h5>
+        <p class="card-text">
+          El Framework Ágil para NodeJS.
+        </p>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#expressModal"
+        >
+          Leer más
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Morgan -->
+  <div class="col-6 col-md-4 col-lg-3 mb-4">
+    <div class="card bg-dark d-flex flex-column h-100">
+      <img
+        src="/image/morgan.png"
+        class="card-img-top w-75 mx-auto shadow rounded mt-1"
+        alt="Hollywood Sign on The Hill"
+      />
+      <div class="card-body text-secondary">
+        <h5 class="card-title text-light">Morgan</h5>
+        <p class="card-text">
+          Control Total sobre las Solicitudes HTTP.
+        </p>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#morganModal"
+        >
+          Leer más
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Ejs -->
+  <div class="col-6 col-md-4 col-lg-3 mb-4">
+    <div class="card bg-dark d-flex flex-column h-100">
+      <img
+        src="/image/Ejs.png"
+        class="card-img-top w-75 mx-auto shadow rounded mt-1"
+        alt="Hollywood Sign on The Hill"
+      />
+      <div class="card-body text-secondary">
+        <h5 class="card-title text-light">Ejs</h5>
+        <p class="card-text">
+          Creación Dinámica de Contenido.
+        </p>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="modal"
+          data-bs-target="#ejsModal"
+        >
+          Leer más
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <!-- ModalExpress -->
+      <div
+        class="modal fade"
+        id="expressModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="expressModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+          role="document"
+        >
+          <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-light" id="expressModalLabel">
+                Express
+              </h5>
+              <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+            </div>
+            <div class="modal-body">
+              <p>
+                Framework ágil. Cuando se trata de crear aplicaciones web,
+                Express.js es el compañero perfecto de Node.js. Este framework
+                minimalista pero poderoso simplifica la creación de servidores
+                web y API, proporcionando una base sólida para construir
+                aplicaciones robustas. Con Express, las rutas y los
+                controladores se definen de manera intuitiva, lo que facilita la
+                gestión de solicitudes entrantes y la entrega de respuestas
+                impresionantes.
+              </p>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ModalMorgan -->
+      <div
+        class="modal fade"
+        id="morganModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="expressModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+          role="document"
+        >
+          <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-light" id="expressModalLabel">
+                Morgan
+              </h5>
+              <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+            </div>
+            <div class="modal-body">
+              <p>
+                Framework ágil. Cuando se trata de crear aplicaciones web,
+                Express.js es el compañero perfecto de Node.js. Este framework
+                minimalista pero poderoso simplifica la creación de servidores
+                web y API, proporcionando una base sólida para construir
+                aplicaciones robustas. Con Express, las rutas y los
+                controladores se definen de manera intuitiva, lo que facilita la
+                gestión de solicitudes entrantes y la entrega de respuestas
+                impresionantes.
+              </p>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ModalEjs -->
+      <div
+        class="modal fade"
+        id="ejsModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="expressModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-dialog-centered modal-dialog-scrollable text-light"
+          role="document"
+        >
+          <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+              <h5 class="modal-title text-light" id="expressModalLabel">Ejs</h5>
+              <!-- <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+            </div>
+            <div class="modal-body">
+              <p>
+                Framework ágil. Cuando se trata de crear aplicaciones web,
+                Express.js es el compañero perfecto de Node.js. Este framework
+                minimalista pero poderoso simplifica la creación de servidores
+                web y API, proporcionando una base sólida para construir
+                aplicaciones robustas. Con Express, las rutas y los
+                controladores se definen de manera intuitiva, lo que facilita la
+                gestión de solicitudes entrantes y la entrega de respuestas
+                impresionantes.
+              </p>
+            </div>
+            <div class="modal-footer border-0">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- Sección de Bootstrap y Nodemon -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Imagen referencial a Bootstrap (reemplaza la ruta) -->
+          <img
+            src="/image/bootstrap.png"
+            alt="Bootstrap"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+        <div class="col-md-6">
+          <h2 class="display-4 text-white">Bootstrap: Estilo y Elegancia</h2>
+          <p class="lead text-white">
+            Utiliza Bootstrap para dar vida a tus diseños y crear interfaces de
+            usuario atractivas y responsivas.
+          </p>
+          <h2 class="display-4 text-white mt-4">
+            Nodemon: Desarrollo Eficiente
+          </h2>
+          <p class="lead text-white">
+            Nodemon supervisa tus cambios de código, lo que agiliza tu proceso
+            de desarrollo. ¡Sin reinicios manuales!
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
